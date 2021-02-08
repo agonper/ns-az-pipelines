@@ -18,16 +18,17 @@ steps:
 
 - script: |
     npm install
+  displayName: 'npm install'
+
+- script: |
     npm run lint
-  displayName: 'npm install and lint'
+  displayName: 'Lint'
 
 - script: |
-    npm install
-    tns build android
-  displayName: 'npm install and build'
+    tns build android 
+  displayName: 'Build'
 
 - script: |
-    npm install
     ./ci-tools/wait-for-emulator.sh
     tns test android --watch false --justlaunch
-  displayName: 'npm install and test'
+  displayName: 'Test'
