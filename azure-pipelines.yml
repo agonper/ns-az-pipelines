@@ -18,5 +18,10 @@ steps:
 
 - script: |
     npm install
+    npm run lint
+  displayName: 'npm install and lint'
+
+- script: |
+    npm install
     tns build android
   displayName: 'npm install and build'
