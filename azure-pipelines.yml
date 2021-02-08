@@ -32,3 +32,8 @@ steps:
     ./ci-tools/wait-for-emulator.sh
     tns test android --watch false --justlaunch
   displayName: 'Test'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/_*.xml'
