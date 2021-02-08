@@ -25,3 +25,8 @@ steps:
     npm install
     tns build android
   displayName: 'npm install and build'
+
+- script: |
+    ./ci-tools/wait-for-emulator.sh
+    tns test android --watch false --justlaunch
+  displayName: 'npm install and build'
