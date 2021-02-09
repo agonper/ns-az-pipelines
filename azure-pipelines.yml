@@ -25,7 +25,7 @@ steps:
   displayName: 'Lint'
 
 - script: |
-    tns build android 
+    tns build android
   displayName: 'Build'
 
 - script: |
@@ -36,4 +36,4 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/*).xml'
+    testResultsFiles: 'test-reports/**/report.xml'

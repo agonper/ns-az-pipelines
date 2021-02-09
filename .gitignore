@@ -16,7 +16,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-TESTS-NativeScript_
+test-reports
 
 # General
 .DS_Store
